@@ -22,3 +22,9 @@ var employees = [ atticus, jem, boo, scout, robert, mayella ];
 // YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
 
 console.log(employees);
+
+function calculateEmployee(employee) {
+  console.log('in calculateEmployee:', employee);
+} //end calculateEmployee
+
+calculateEmployee(scout);
