@@ -1,9 +1,21 @@
-var atticus = { name: "Atticus", employeeNumber: "2405", annualSalary: "47000", reviewRating: 3 };
-var jem = { name: "Jem", employeeNumber: "62347", annualSalary: "63500", reviewRating: 4 };
-var boo = { name: "Boo", employeeNumber: "11435", annualSalary: "54000", reviewRating: 3 };
-var scout = { name: "Scout", employeeNumber: "6243", annualSalary: "74750", reviewRating: 5 };
-var robert = { name: "Robert", employeeNumber: "26835", annualSalary: "66000", reviewRating: 1 };
-var mayella = { name: "Mayella", employeeNumber: "89068", annualSalary: "35000", reviewRating: 2 };
+class Employee {
+
+  constructor( name, employeeNumber, annualSalary, reviewRating ) {
+    this.name = name;
+    this.employeeNumber = employeeNumber;
+    this.annualSalary = annualSalary;
+    this.reviewRating = reviewRating;
+
+  } // end constructor
+} // end Employee class
+
+
+var atticus = new Employee ("Atticus", "2405", "47000", 3); //invoke constructor
+var jem = new Employee ("Jem", "62347", "63500", 4);
+var boo = new Employee ("Boo", "11435", "54000", 3);
+var scout = new Employee ("Scout", "6243", "74750", 5);
+var robert = new Employee ("Robert", "26835", "66000", 1);
+var mayella = new Employee ("Mayella", "89068", "35000", 2);
 
 var employees = [ atticus, jem, boo, scout, robert, mayella ];
 
