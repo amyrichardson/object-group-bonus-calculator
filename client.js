@@ -49,6 +49,12 @@ function calculateEmployee(employee) {
   console.log('bonusPercentage:', bonusPercentage);
 
   //max salary
+  if(Number(employee.annualSalary) > 65000) {
+    console.log('too high salary, adjusting');
+    bonusPercentage -= 0.01;
+  } // end annual salary
+
+  console.log('new bonus Percentage:', bonusPercentage);
 
   //min/max bonus
 
