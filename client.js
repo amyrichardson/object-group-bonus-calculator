@@ -53,10 +53,14 @@ function calculateEmployee(employee) {
     console.log('too high salary, adjusting');
     bonusPercentage -= 0.01;
   } // end annual salary
-
   console.log('new bonus Percentage:', bonusPercentage);
-
   //min/max bonus
+  if (bonusPercentage > 0.13) {
+    bonusPercentage = 0.13;
+  } else if (bonusPercentage < 0.0) {
+    bonusPercentage = 0.0;
+  } //end min/max check
+  console.log('bonus percentage after min/max check', bonusPercentage);
 
   //return an object
 } //end calculateEmployee
