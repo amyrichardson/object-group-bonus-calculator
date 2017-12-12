@@ -38,9 +38,15 @@ function calculateEmployee(employee) {
   } //end 5
   else {
     bonusPercentage = 0.0;
-  } //end else
+  } //end other
+  console.log('bonus after review rating check:', bonusPercentage);
 
   //employee number
+  if(employee.employeeNumber.length === 4) {
+    console.log('oldschool cat');
+    bonusPercentage += 0.05;
+  } //end employee number length
+  console.log('bonusPercentage:', bonusPercentage);
 
   //max salary
 
