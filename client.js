@@ -24,21 +24,8 @@ var employees = [ atticus, jem, boo, scout, robert, mayella ];
 console.log(employees);
 
 function calculateEmployee(employee) {
-  console.log('in calculateEmployee:', employee);
   var bonusPercentage = 0;
-  //calculate review reviewRating
-  if(employee.reviewRating === 3) {
-    bonusPercentage = 0.04;
-  } //end 3
-  else if (employee.reviewRating === 4) {
-    bonusPercentage = 0.06;
-  } //end 4
-  else if (employee.reviewRating === 5) {
-    bonusPercentage = 0.1;
-  } //end 5
-  else {
-    bonusPercentage = 0.0;
-  } //end other
+  bonusPercentage += calculateReviewRatingBonus(employee.reviewRating); //add reviewRatingBonus 
   //employee number
   if(employee.employeeNumber.length === 4) {
     bonusPercentage += 0.05;
@@ -62,3 +49,31 @@ function calculateEmployee(employee) {
   }; //end object to return
   return objectToReturn;
 } //end calculateEmployee
+
+function calculateEveryEmployee() {
+  console.log('in calculateEveryEmployee');
+  //loop through employees array and send each to be calculated
+  var employeesBonusInfo = [];
+  for (var i = 0; i < employees.length; i++) {
+    console.log('calculating', employees[i]);
+    employeesBonusInfo.push(calculateEmployee(employees[i]));
+  } //end for loop
+  return employeesBonusInfo;
+} //end calculateEveryEmployee
+
+function calculateReviewRatingBonus(reviewRating) {
+  console.log('in calculateReviewRatingBonus', reviewRating);
+  //calculate review reviewRating
+  if(reviewRating === 3) {
+    return 0.04;
+  } //end 3
+  else if (reviewRating === 4) {
+    return 0.06;
+  } //end 4
+  else if (reviewRating === 5) {
+    return 0.1;
+  } //end 5
+  else {
+    return 0.0;
+  } //end other
+} //end calculateReviewRatingBonus
