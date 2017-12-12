@@ -25,6 +25,28 @@ console.log(employees);
 
 function calculateEmployee(employee) {
   console.log('in calculateEmployee:', employee);
+  var bonusPercentage = 0;
+  //calculate review reviewRating
+  if(employee.reviewRating === 3) {
+    bonusPercentage = 0.04;
+  } //end 3
+  else if (employee.reviewRating === 4) {
+    bonusPercentage = 0.06;
+  } //end 4
+  else if (employee.reviewRating === 5) {
+    bonusPercentage = 0.1;
+  } //end 5
+  else {
+    bonusPercentage = 0.0;
+  } //end else
+
+  //employee number
+
+  //max salary
+
+  //min/max bonus
+
+  //return an object
 } //end calculateEmployee
 
 calculateEmployee(scout);
